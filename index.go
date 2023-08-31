@@ -1,6 +1,7 @@
 package main
 
 // index is an inverted index. It maps tokens to document IDs.
+// key is text token, value is doc list
 type index map[string][]int
 
 // add adds documents to the index.
