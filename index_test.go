@@ -1,9 +1,10 @@
 package main
 
 import (
-	"testing"
-
+	"fmt"
+	"github.com/akrylysov/simplefts/calc"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestIndex(t *testing.T) {
@@ -23,4 +24,17 @@ func TestIndex(t *testing.T) {
 	assert.Equal(t, idx.search("donut"), []int{1, 2})
 	assert.Equal(t, idx.search("DoNuts"), []int{1, 2})
 	assert.Equal(t, idx.search("glass"), []int{1})
+}
+
+func TestCalcModule(t *testing.T) {
+	fmt.Println(calc.Age)
+	calc.PrintWelcome()
+
+	person := calc.Person{
+		Title:   "title",
+		Address: "address",
+		Name:    "name",
+		ID:      234,
+	}
+	fmt.Println(person)
 }
